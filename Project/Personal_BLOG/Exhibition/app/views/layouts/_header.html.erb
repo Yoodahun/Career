@@ -1,0 +1,38 @@
+<!-- Navigation bar -->
+<nav class="navbar navbar-fixed-top navbar-inverse">
+	<div>
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			</button>
+			<%#= link_to 'Exhibition', root_path, class: 'navbar-brand', id: 'logo' %>
+		</div>
+
+		<div id="navbar" class="navbar-collapse collapse" style="padding-left: 30px; font-size: 8px;">
+			<ul class="nav navbar-nav navbar-left">
+				<li style="font-size: 8px;"><%= link_to 'Snap', tag_path('Snap'), method: :post %> </li>
+				<li style="font-size: 8px;"><%= link_to 'Portrait', tag_path('Portrait'), method: :post  %></li>
+				<li style="font-size: 8px;"><%= link_to 'Landscape', tag_path('Landscape'), method: :post  %></li>
+				<li style="font-size: 8px;"><%= link_to 'Travel', tag_path('Travel'), method: :post  %></li>
+				<li style="font-size: 8px;"><%= link_to 'B&W', tag_path('BlackandWhite'), method: :post  %></li>
+				<li style="font-size: 8px;"><%= link_to 'Film', tag_path('Film'), method: :post  %></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right" style="  margin-right: 20px;">
+				<% if user_signed_in? %>
+					<% if current_user.id == 1%>
+					<!-- 관리자만 새글쓰게끔. -->
+						<li style="font-size: 8px;"><%= link_to 'Main', posts_path %></li>
+						<li style="font-size: 8px;"><%= link_to 'New Post', new_post_path %></li>
+						<li style="font-size: 8px;"><%= link_to 'Posts List', bulletins_path %></li>
+						<li style="font-size: 8px;"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+					<% else %>
+						<li style="font-size: 8px;"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+					<% end %>
+				<% else %>
+					<li style="font-size: 8px;"><%= link_to 'Main', posts_path %></li> |
+					<li style="font-size: 8px;"><%= link_to 'Contact', new_message_path %></li>
+					<!-- <li><%= link_to('Sign in', new_user_session_path) %></li> -->
+				<% end %>
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div><!--/.container-fluid -->
+</nav>

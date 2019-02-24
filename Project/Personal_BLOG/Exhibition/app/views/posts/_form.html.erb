@@ -1,0 +1,48 @@
+
+<div class="well" style="padding: 10px; margin-top: 150px;">
+<h1>New Post</h1>
+<%= form_with(model: post, html: {multipart: true}, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :post_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.text_field :area, id: :post_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :post_image %>
+  </div>
+    <%= form.hidden_field :user_id, id: :post_user_id, value: current_user.id %>
+<div class="field">
+
+</div>
+<hr>
+  <div class="actions">
+    <%= form.label :tag_list%>
+    <%= form.check_box :tag_list, {multiple: true}, 'Snap'%> Snap <br>
+    <%= form.check_box :tag_list, {multiple: true}, 'Portrait'%> Portrait <br>
+    <%= form.check_box :tag_list, {multiple: true}, 'Landscape'%> Landscape <br>
+    <%= form.check_box :tag_list, {multiple: true}, 'Travel'%> Travel <br>
+    <%= form.check_box :tag_list, {multiple: true}, 'BlackandWhite'%> B/W <br>
+    <%= form.check_box :tag_list, {multiple: true}, 'Film'%> Film <br>
+    <hr>
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Landing Zero Free Bootstrap Theme with Video</title>
+    <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+       <!-- 합쳐지고 최소화된 최신 CSS -->
+   <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+   <!--jQuery UI CSS파일 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <!--jQuery 기본 js파일-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+    
+    <!--jQuery UI 라이브러리 js파일-->
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <script>
+    $(document).ready(function(){
+              //이 페이지가 불려올떄
+              var hotelname = sessionStorage.getItem("hotelname");
+              var location_address = sessionStorage.getItem("location_address");
+              console.log(hotelname);
+              console.log(location_address);
+              //세션에서 가져오자 어느 호텔을 선택하엿는지
+              var hotel = document.getElementById("hotel");
+              var area = document.getElementById("area");
+              // 호텔 입력칸을 찾아서
+              $( document ).ready(function() {
+                //가끔 지연으로 인해 늦게 원소가 생성될 수 있으니, 방지턱을 하나 두자
+                //예외처리
+              hotel.setAttribute('value',hotelname);
+              area.setAttribute('value',location_address);
+              //값을 집어넣자.
+              })
+          });
+      
+   </script>
+    <!-- 여기까지는 메뉴바 -->
+
+    <div class="container">
+
+    <div class="row2">
+
+      <div class="col-lg-7 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+          
+          <div>
+            	<img class="relay" style="height:10%; width:20%;display:block;margin: 4% auto;" <%= image_tag("relaytel2_gray.png", :alt => "") %>
+		    	</div>
+        <div class="well well-lg" style="margin-top: 20px;" >
+          <form action="/create" method="POST">
+          <h1>Application Form</h1>
+          <hr style="width: 100%; color: black; height: 2px; background-color:black;">
+            <div class="form-inline">
+              <div class="form-group">
+                <h3><label for="firstName" style="margin-right: 42px;" value="">Area</label></h3>
+                <input type="text" class="form-control" id="area" name="area" value="" readonly>
+              </div>
+              <div class="form-group">
+                <h3><label for="familyName" style="margin-right: 50px;">Hotel</label></h3>
+                <input type="text" class="form-control" id="hotel" name="hotel" value="" readonly>
+              </div>
+            </div>
+            
+            <br>
+            <!--이름-->
+            <div class="form-inline">
+              <div class="form-group">
+                <h3><label for="firstName">예약자 이름</label></h3>
+                <input type="text" class="form-control" id="firstName" name="name" value="" placeholder="name">
+              </div>
+            </div>
+            
+            <!--사람수-->
+            <div class="form-group form-inline">
+              <h3><label for="number">People number</label></h3>
+              <select name="job">
+                    <option value="">인원수선택</option>
+                    <option value="1명">1</option>
+                    <option value="2명">2</option>
+                    <option value="3명">3</option>
+                    <option value="4명">4</option>
+              </select>
+            </div>
+
+            <br>
+
+            <!--성별-->
+            <div class="form-inline">
+              <h3><label for="checkbox" style="margin-right: 20px;">Gender</label></h3>
+              <div class="radiobutton">
+                 <input type="radio" id="male" name="gender"  name="male" value="M"> Male<br>
+                  <input type="radio" id="female" name="gender" name="female" value="F"> Female<br>
+                </div>
+
+            <br>
+            
+            <!--이메일-->
+            <div class="form-group form-inline">
+              <h3><label for="email">Email address:</label></h3>
+              <input type="email" class="form-control" size="30" id="email" name="email" value=""  placeholder="abcd@google.co.kr">
+            </div>
+            <br>
+            
+            <br>
+            <br>
+            
+            <!--날짜-->
+            <div class="form-inline">
+              <div class="form-group">
+               <h3> <label style="margin-right:20px;">Check In :</label></h3>
+                <input type="text" class="form-control form-control-1 input-sm from" name="check_in" value="" id="checkin" placeholder="CheckIn" >
+            </div>
+            
+            <div class="form-group">
+            <h3><label style="margin-right:20px;">Check Out :</label></h3>
+            <input type="text" class="form-control form-control-2 input-sm to" id="checkout" name="check_out" value="" placeholder="CheckOut">
+            </div>
+
+                <br>
+                <br>
+
+            </div>
+
+            <br>
+            <!--제출-->
+            <div align= "center">
+                <input type="submit" class="btn btn-default" value="Submit">
+                
+                <button onclick="window.history.back()" class="btn btn-default ">Back </button>
+            </div>
+            </form>
+          </div>
+      </div>
+
+
+    </div>
+    </div>
+    
+
+
+
+
+  <script type="text/javascript">
+        
+          var startDate = new Date();
+          var fechaFin = new Date();
+          var FromEndDate = new Date();
+          var ToEndDate = new Date();
+      
+
+         $(function() {
+                  $('.from').datepicker({
+                      autoclose: true,
+                      minViewMode: 1,
+                      format: 'yyyy/mm/dd'
+                  }).on('changeDate', function(selected){
+                          startDate = new Date(selected.date.valueOf());
+                          startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+                          $('.to').datepicker('setStartDate', startDate);
+                      });
+        
+                  $('.to').datepicker({
+                      autoclose: true,
+                      minViewMode: 1,
+                      format: 'yyyy/mm/dd'
+                  }).on('changeDate', function(selected){
+                          FromEndDate = new Date(selected.date.valueOf());
+                          FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                          $('.from').datepicker('setEndDate', FromEndDate);
+                        });
+                        
+                });
+   </script>
+
+
+</body>
+
+
+
+</html>

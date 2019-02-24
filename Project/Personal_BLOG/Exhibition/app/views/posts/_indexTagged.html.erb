@@ -1,0 +1,20 @@
+<% @posts.each do |post| %>
+    <div class="grid-item item animate-box" data-animate-effect="fadeIn">
+        <a href="<%= image_path post.image%>" class="image-popup" title="<%= post.title%>" >
+
+        <div class="img-wrap">
+          <img src="<%= image_path post.image%>" alt="" class="img-responsive">
+        </div>
+
+        <div class="text-wrap">
+          <div class="text-inner popup">
+            <div>
+              <h2><%= post.title%></h2>
+              <span><%= post.area%></span>
+            </div>
+          </div>
+        </div>
+
+      </a>
+    </div>
+<%end%>

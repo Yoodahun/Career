@@ -1,0 +1,154 @@
+@media all and (max-width: 767px){
+
+  .email, .password, .password_confirmation {
+      width:200px;
+      height:40px;
+    }
+    .reg_new_field{
+       border: none;
+            /*text-rendering: auto;*/
+            color: initial;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            margin: 0em;
+            font: 13.3333px Arial;
+             text-align:center;
+             padding: 10px;
+             box-sizing: border-box;
+    }
+    .sing_up{
+      margin-top:20px auto;
+       width:220px;
+      height:40px;
+    }
+    .email, .password , .password_confirmation{
+      border:none;
+      
+    }
+    .login_form{
+      border: 1px solid #dadada;
+      width:220px;
+      height:200px;
+      text-align:center;
+      zoom:1;
+      display:block;
+      margin:0 auto;
+      
+    }
+    .new_user{
+      text-align:center;
+    }
+    .lo_img{
+    width: 35vw;
+    height: 20vh;
+}
+			
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .email, .password, .password_confirmation {
+      width:300px;
+      height:40px;
+    }
+    .reg_new_field{
+       border: none;
+            /*text-rendering: auto;*/
+            color: initial;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            margin: 0em;
+            font: 13.3333px Arial;
+             display: block;
+             text-align:center;
+             padding: 10px;
+             box-sizing: border-box;
+    }
+    .sing_up{
+      margin:15px auto;
+      width: 320px;
+       height:40px;
+      
+    }
+    .email, .password , .password_confirmation{
+      border:none;
+      
+    }
+    .login_form{
+      border: 1px solid #dadada;
+      width:320px;
+      height:200px;
+      text-align:center;
+      zoom:1;
+      display:block;
+      margin:0 auto;
+      
+    }
+    .new_user{
+      text-align:center;
+    }
+    .lo_img{
+    width: 35vw;
+    height: 20vh;
+}
+}
+
+@media all and (min-width: 1025px) {
+    .email, .password, .password_confirmation {
+        width:500px;
+        height:50px;
+    }
+    .reg_new_field{
+        border: none;
+        /*text-rendering: auto;*/
+        color: initial;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        margin: 0em;
+        font: 13.3333px Arial;
+        display: block;
+        text-align:center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+.sing_up{
+  margin:20px auto;
+  width:520px;
+  height:50px;
+  
+}
+.email, .password , .password_confirmation{
+  border:none;
+  
+}
+.login_form{
+  border: 1px solid #dadada;
+  width:520px;
+  height:230px;
+  text-align:center;
+  zoom:1;
+  display:block;
+  margin:0 auto;
+  
+}
+.new_user{
+  text-align:center;
+}
+.lo_img{
+    width: 35vw;
+    height: 20vh;
+}
+}

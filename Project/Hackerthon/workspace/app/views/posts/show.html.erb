@@ -1,0 +1,69 @@
+<style>
+  small {
+    text-align: right;
+  }
+  
+</style>
+
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+
+
+<h1><%= @post.title %> </h1>
+<hr></hr>
+<p>
+  
+  <h3 style="text-align: right;"><%= @post.user.email %> </h3>
+  <small><%= @post.created_at %></small>
+  
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<div class="well">
+  <% if user_signed_in? %>
+    <%= form_for @comment, url: post_comments_path(@post) do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :post_id, value: @post.id %>
+      <%= f.text_field :content, label: 'Leave a comment!' %>
+      <%= f.submit %>
+    <% end %>
+  <% end %>
+</div>
+
+<hr>
+</hr>
+
+<% @comments.each do |comment| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <strong><%= comment.user.email%></strong>
+        <small><%= comment.created_at %></small>
+        <% if current_user == comment.user %>
+          <%= link_to '삭제' ,post_comment_path(@post, comment, method: :delete) %>
+        <% end %>
+      
+      </h4>
+      <%#댓글보여주기창 %>
+      <%= comment.content %>
+    </div>
+  </div>
+  <hr>
+<% end %>
+
+
+  <% if current_user == @post.user %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Destroy', @post, method: :delete, data: { confirm: '진짜루 삭제할꺼냐' } %> |
+  <% end %>
+
+<%= link_to 'Back', posts_path %>
+
+</div>

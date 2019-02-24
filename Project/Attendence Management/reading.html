@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"> -->
+  <link rel="stylesheet" href="css/reading.css">
+  <title>勤怠記録閲覧</title>
+</head>
+
+<body>
+  <header class="container">
+    <div class="dropdown float-right">
+      <br>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="loginuser" data-toggle="dropdown">
+        ユーザー名
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item logout" href="report/login?loginuser=out">ログアウト</a>
+      </div>
+    </div>
+    <div>
+      <br>
+      <button class="btn btn-secondary" type="button" id="return">
+        back
+      </button>
+    </div>
+    <br>
+  </header>
+  <main class="container">
+    <form class="form-search">
+
+      <select id="Subordinate" name="id">
+  </select>
+      <div>
+        <label><input type="radio" name="select" value="month" id="monthButton" checked/>月</label>
+        <input type="month" name="startDate" id="month" min="" onkeydown="return false">
+      </div>
+      <div>
+        <label><input type="radio" name="select" value="week" id="weekButton">週</label>
+        <input type="date" name="startDate" id="week" min="" onkeydown="return false">
+      </div>
+      <div>
+        <label><input type="radio" name="select" value="option" id="optionButton">任意</label>
+        <input type="date" name="startDate" id="option1" onkeydown="return false"> ～ <input type="date" name="endDate" id="option2" onkeydown="return false">
+      </div>
+      <br>
+
+
+    </form>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-light search">検索</button>
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-light insert">勤怠入力</button>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="dialog" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dialogLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form class="container-fulid form-data">
+              <input type="hidden" name="method" value="post" id="method">
+
+              <div class="form-group col-6">
+                <input type="hidden" name="id" id="id">
+                <input type="date" name="date" class="form-control" id="date">
+              </div>
+
+              <div class="form-group col-6">
+                <label for="workType">勤務種類</label>
+                <select class="form-control" id="workType" name="workType">
+                  
+              </select>
+              </div>
+
+
+              <div class="form-group col-6">
+                <label for="startTime">出社時間</label>
+                <input type="time" name="startTime" class="form-control" id="startTime" min="09:00:00" max="18:00">
+              </div>
+
+              <div class="form-group col-6">
+                <label for="endTime">退社時間</label>
+                <input type="time" name="endTime" class="form-control" id="endTime" max="23:59">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="esc"><i class="fas fa-times"></i> キャンセル</button>
+            <button type="button" class="btn btn-primary ok"><i class="fas fa-check"></i> OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>勤務日</th>
+          <th>社員番号</th>
+          <th>出社時間</th>
+          <th>退社時間</th>
+          <th>勤務種類</th>
+          <th>休憩時間</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <th></th>
+        <th></th>
+        <th>合計勤務時間</th>
+        <th id="totalWorkTime">0:0</th>
+
+        <th>合計休憩時間</th>
+        <th id="restTime">0:0</th>
+      </tfoot>
+    </table>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="js/reading.js"></script>
+</body>
+
+</html>

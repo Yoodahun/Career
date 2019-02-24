@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!--<meta http-equiv="refresh" content="5">-->
+	<meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content="Codeply">
+	<!--<link rel="stylesheet" href="./css/bootstrap.min.css" />-->
+	<!--<link rel="stylesheet" href="./css/animate.min.css" />-->
+	<!--<link rel="stylesheet" href="./css/ionicons.min.css" />-->
+	<!--<link rel="stylesheet" href="./css/styles.css" />-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<%= stylesheet_link_tag "login.css" %>
+	<meta charset="utf-8">
+	<!-- 합쳐지고 최소화된 최신 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<style type="text/css">
+	@media all and (max-width: 767px){
+			.table-responsive{
+			margin:0 auto;
+			width:80vw;
+		}
+		.w3-container{
+		margin-bottom:5vh;
+    	width:100%;
+    	height:100%;
+    }
+	}
+	@media all and (min-width: 768px) and (max-width: 1024px) {
+		.table-responsive{
+			margin:0 auto;
+			width:50vw;
+		}
+		.w3-container{
+		margin-bottom:5vh;
+    	width:100%;
+    	height:100%;
+    }
+	}
+	@media all and (min-width: 1025px) {
+		.table-responsive{
+			margin:0 auto;
+			width:50vw;
+		}
+		.w3-container{
+		margin-bottom:5vh;
+    	width:100%;
+    	height:100%;
+    }
+    
+	}
+
+	#noApp {
+	    padding-top:10%;
+	    text-align:center;
+	}
+</style>
+
+
+<%#TODO : CSS 꾸미기 / 반응형으로 꾸며야해...%>
+<%#TODO : 로그인창으로 되돌아 가는것 도 끝내야만해 .%>
+<%#TODO : 수요일에는 회원가입을 하고 여러 케이스에서 확인해야자%>
+
+<body>
+	<div class="myPage">
+		<img id="img" src="waiting.jpg">
+		
+		</img>
+	</div>
+	
+	<div class="user_login_location">
+		
+		<% if ApplicationForm.find_by_user_id(current_user) != nil %>
+			<h1 style="font-Weight:bold; margin:0 0 0 0; padding:5vh 0; text-align:center;"> My Page</h1>
+			      <div class="w3-container">
+			          <div class="table-responsive"  >          
+						  <table class="table table-hover table_myinfo"  style="margin: 0 auto; ">
+						      <tbody>
+						      <tr >
+						        <th>대표자 이름</th>
+						        <td><%= @user_information.representiveName %></td>
+						      </tr>
+						      <tr >
+						        <th>호텔 정보</th>
+						        <td><%=@user_information.area %>, <%=@user_information.hotel %></td>
+						      </tr>
+						      <tr>
+						        <th>체크 인</th>
+						        <td><%= @user_information.check_in %></td>
+						      </tr>
+						      <tr>
+						        <th>체크 아웃</th>
+						        <td><%= @user_information.check_out %></td>
+						      </tr>
+						     
+						      <tr>
+						        <th>신청현황</th>
+						        <td>
+						        	<% if @matched == true %>
+						        	 <!--<div style="border-radius:100%; background-color:green;height:30px;width:30px; z-index:1;"></div>-->
+						        	<span  style="color:#0000FF;font-weight:bold">매치가 되었습니다.</span>
+				        			 
+				        			<% else %>
+				        			
+						        	 <!--<div style="border-radius:100%; background-color:red;height:30px;width:30px; z-index:1;"></div>-->
+				        			<span style="color:#FF0000;font-weight:bold">매치가 되지 않았습니다.</span>
+				        			<% end %>
+				        		</td>
+						      </tr>
+						  </table>
+					</div>	 
+			      </div>
+	      			<div style="text-align:center;">
+			  			<a href="/login"><button class="button_new" style="margin:2vh auto;" type="submit" >이전 페이지</button></a>
+					</div>
+			
+		<%else%>
+			  <div id = "noApp">
+			   <h1 style="color: rgba(145, 58, 58, 0.66); font-weight:bold">작성된 신청현황이 없습니다.</h1><br>
+			   <div>
+			   <a href="/map"><button class="button_new"  style="display:inline" type="submit" >Go to the map</button></a>
+			   <a href="/posts"><button class="button_new" style="display:inline"  type="submit" >게시판 가기</button></a>
+			   <a href="/login"><button class="button_new" style="display:inline"  type="submit" >이전 페이지</button></a>
+			  </div>
+			  </div>
+		<%end%>
+		   
+	</div>
+	<script>
+		window.onload = function () {
+			kCalendar('kCalendar');
+		};
+	</script>
+	
+</body>
+
+</html>

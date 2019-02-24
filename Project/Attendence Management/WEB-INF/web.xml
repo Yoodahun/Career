@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+
+
+
+  <!-- ### CheckDoneServlet ### -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/report/login</url-pattern>
+  </servlet-mapping>
+
+  <!-- ### PasswordServlet ### -->
+  <servlet>
+    <servlet-name>PasswordServlet</servlet-name>
+    <servlet-class>controller.PasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PasswordServlet</servlet-name>
+    <url-pattern>/report/password</url-pattern>
+  </servlet-mapping>
+
+  <!-- ### RecordServlet ### -->
+  <servlet>
+    <servlet-name>RecordServlet</servlet-name>
+    <servlet-class>controller.RecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RecordServlet</servlet-name>
+    <url-pattern>/report/record</url-pattern>
+  </servlet-mapping>
+
+
+    <!-- ### DepartServlet ### -->
+    <servlet>
+      <servlet-name>DepartServlet</servlet-name>
+      <servlet-class>controller.DepartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>DepartServlet</servlet-name>
+      <url-pattern>/report/depart</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### SectionServlet ### -->
+    <servlet>
+      <servlet-name>SectionServlet</servlet-name>
+      <servlet-class>controller.SectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>SectionServlet</servlet-name>
+      <url-pattern>/report/section</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### EmpServlet ### -->
+    <servlet>
+      <servlet-name>EmpServlet</servlet-name>
+      <servlet-class>controller.EmpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>EmpServlet</servlet-name>
+      <url-pattern>/report/emp</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### MonthSearchServlet ### -->
+    <servlet>
+      <servlet-name>MonthSearchServlet</servlet-name>
+      <servlet-class>controller.MonthSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>MonthSearchServlet</servlet-name>
+      <url-pattern>/report/month</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### WeekSearchServlet ### -->
+    <servlet>
+      <servlet-name>WeekSearchServlet</servlet-name>
+      <servlet-class>controller.WeekSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>WeekSearchServlet</servlet-name>
+      <url-pattern>/report/week</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### OptionSearchServlet ### -->
+    <servlet>
+      <servlet-name>OptionSearchServlet</servlet-name>
+      <servlet-class>controller.OptionSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>OptionSearchServlet</servlet-name>
+      <url-pattern>/report/option</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### WorkServlet ### -->
+    <servlet>
+      <servlet-name>WorkServlet</servlet-name>
+      <servlet-class>controller.WorkServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>WorkServlet</servlet-name>
+      <url-pattern>/report/work</url-pattern>
+    </servlet-mapping>
+
+    <!-- ### PositionServlet ### -->
+    <servlet>
+      <servlet-name>PositionServlet</servlet-name>
+      <servlet-class>controller.PositionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>PositionServlet</servlet-name>
+      <url-pattern>/report/position</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>

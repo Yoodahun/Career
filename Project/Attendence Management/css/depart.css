@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.table table-hover th {
+  overflow-x: hidden;
+}
+
+.col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 18px;
+}

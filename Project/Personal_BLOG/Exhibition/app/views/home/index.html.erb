@@ -1,0 +1,42 @@
+
+<style>
+  h1 {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0.3rem;
+    color: rgb(0,0,0);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+
+  }
+  body{
+    <% if @photo_background != nil  %>
+    background-image: url("<%= @photo_background.image %>");
+    <% else %>
+    background-image: none;
+    <%end%>
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+ a{
+   color: black;
+  &:hover {
+
+  }
+ }
+</style>
+
+
+
+<div>
+  <div class="container">
+    <div class="col-md-12">
+      <h1><%= link_to 'Welcome my Exhibition', posts_path, style: "font-size: 50px;"%></h1>
+    </div>
+  </div>
+</div>

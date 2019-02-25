@@ -4,23 +4,27 @@ Resume
 
 <div style="text-align: right"> <img src="/Documents/photo.jpg" width="150" height="200"></img></div>
 
-# <center> Yoo Dahun(ユダフン) </center>
+# <center> Yoo Dahun(ユダフン) </center>  
 
 <div style="text-align: right">
 080-8011-5146  
 dahun4032@gmail.com
 https://github.com/Yoodahun/Introduce_myPortfolio
-</div>
-***
+</div>    
+  
+***    
+
 初めまして。ユダフンと申します。
 今回、私のGithubを足を運んでくださいまして、
 誠にありがとうございます。
 大学時代から現在まで、私が勉強した科目の課題やプロジェクト、個人的に作ったプロジェクト、また今勉強しているもの資材をまとめました。  
-つまらないものですが、よろしくお願い致します。
-***
+つまらないものですが、よろしくお願い致します。    
+
+***  
+
 履歴および経歴
 --
-
+  
 ### 1. 履歴
 - 忠南造船高校 (Chungnam Joseon Technical High School)  ~ 2010
 - 兵役：陸軍　36ヶ月（2011. 03 ~ 2013. 12. 職業軍人）

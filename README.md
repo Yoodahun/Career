@@ -4,14 +4,14 @@ Resume
 
 <div style="text-align: right"> <img src="/Documents/photo.jpg" width="150" height="200"></img></div>
 
-# <center> Yoo Dahun(ユダフン) </center>  
+# <center>Yoo Dahun(ユダフン)</center>  
 
 <div style="text-align: right">
-080-8011-5146  
-dahun4032@gmail.com
-https://github.com/Yoodahun/Introduce_myPortfolio
+080-8011-5146 <br>
+dahun4032@gmail.com <br>
+https://github.com/Yoodahun/Introduce_myPortfolio<br>
 </div>    
-  
+
 ***    
 
 初めまして。ユダフンと申します。
@@ -24,7 +24,7 @@ https://github.com/Yoodahun/Introduce_myPortfolio
 
 履歴および経歴
 --
-  
+
 ### 1. 履歴
 - 忠南造船高校 (Chungnam Joseon Technical High School)  ~ 2010
 - 兵役：陸軍　36ヶ月（2011. 03 ~ 2013. 12. 職業軍人）

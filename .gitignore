@@ -16,6 +16,8 @@
 /Personal_BLOG/Exhibition/db/*.sqlite3
 
 
+
+
 # Ignore all logfiles and tempfiles.
 /hackerthon/workspace/log/*
 /hackerthon/workspace!/log/.keep
@@ -24,3 +26,5 @@
 /Personal_BLOG/Exhibition/log/*
 /Personal_BLOG/Exhibition!/log/.keep
 /Personal_BLOG/Exhibition/tmp
+
+職務経歴書.doc

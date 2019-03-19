@@ -2,22 +2,28 @@ READ ME
 ==
 Description
 
-※ 多くの説明が韓国語に記載されています。ご了承ください。
+※ 多くの説明が**韓国語**に記載されています。ご了承ください。
 
-※ Many explanations are written in Korean.
+※ Many explanations are written in **Korean**.
 
 Studying
 --
 
+(勉強中です。)
+
 ### 1. iOS
+
 - ##### Swift, X-Code
-Udemy class  
-<https://www.udemy.com/ios11-app-development-bootcamp/>
+
+  Udemy class  
+  <https://www.udemy.com/ios11-app-development-bootcamp/>
 
 ### 2. Linux
+
 - ##### Bash Shell Script
-Udemy class  
-<https://www.udemy.com/bash-shell-scripting-crash-course-for-beginners/>
+
+  Udemy class  
+  <https://www.udemy.com/bash-shell-scripting-crash-course-for-beginners/>
 
   *Linuxの勉強の後、AWS Certified Solution Architectを勉強する予定です。*
 
@@ -27,7 +33,10 @@ Class
 > ###### レポートは全て韓国語で書かれています。ご了承ください。
 > ###### All reports are written in Korean.
 
+大学授業の授業内容や課題レーポト、ソースコード。
+
 ### 1.Algorithms
+
 - Algorithms 授業の課題物
 - ##### C++
 
@@ -37,17 +46,23 @@ Class
 
 ### 3. Object Oriented Design
 - Object Oriented Design 授業の課題物
+
   * 「/Project/PosSytem」のドキュメント
-- #### Java, Swing
-- #### Eclipse
+- ##### Java, Swing
+- ##### Eclipse
 
 ### 4. Operating System
+
 - OS授業の課題物
-  - Thread, Mutex, Semaphore
+
+  - Thread, Mutex, Semaphoreなど
 - #### Linux 仮想マシン
 - #### C
 
 ### 5. Programming Language
 - Programming Language授業の課題物
+
   - Tokenを利用したInterperter 言語の実装方法
+
 - #### Java
+

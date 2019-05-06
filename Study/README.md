@@ -35,6 +35,8 @@ Class
 
 大学授業の授業内容や課題レーポト、ソースコード。
 
+[Repoはこちらです。](https://github.com/Yoodahun/Studied-in-University)
+
 ### 1.Algorithms
 
 - Algorithms 授業の課題物

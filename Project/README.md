@@ -59,17 +59,17 @@ Description
 
 ###### 趣味が写真であり、Instagramの他に、Portfolioとして使うため作成しましたが、S3をFree tierで使用するためか、写真が多くなると接続とローディングに時間がかかる問題を発見。また、テンプレートの問題で、Chromeでしか正しく表示されないことを確認。何回か改善しようと思いましたが、別のサイトを作ることがもっと早いと判断しました。
 
-
-
 <https://exhibition-yoo.herokuapp.com>
 
-# 4. PosSystem
+
+
+# 4. POS System
+
 ### 大学授業プロジェクト
+
 - 飲食店のPOSシステム
 - 大学の Object Oriented Design 授業でWaterfall工程で開発。
 - JAVAのSwing Componentsを利用
-- 担当作業
-  - ドキュメント作成および管理
-  - レシピ・材料管理機能作成
-- #### Java
-- #### Eclipse
+
+[Project Repoはこちら](https://github.com/Yoodahun/POS_System)
+

@@ -51,15 +51,10 @@ Description
 
 - 開発サークルで学んだ知識を生かして、個人プロジェクトとして作成
 - デザインはテンプレートを使用
-- #### Ruby on Rails
-- #### HTML
-- #### JavaScript
-- #### AWS S3, EC2
-- #### C9, Git, Bitbucket, Heroku
-
-###### 趣味が写真であり、Instagramの他に、Portfolioとして使うため作成しましたが、S3をFree tierで使用するためか、写真が多くなると接続とローディングに時間がかかる問題を発見。また、テンプレートの問題で、Chromeでしか正しく表示されないことを確認。何回か改善しようと思いましたが、別のサイトを作ることがもっと早いと判断しました。
 
 <https://exhibition-yoo.herokuapp.com>
+
+[Project Repoはこちら](https://github.com/Yoodahun/Exhibition)
 
 
 

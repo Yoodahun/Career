@@ -19,10 +19,10 @@ Description
 
   - ###### 主にDB担当(SQL, ORM)
 
-  
-
+##### [Project Repoはこちら](https://github.com/Yoodahun/Attendence-Management)
 
 # 2. Hackerthon
+
 ### ホテル予約サービス
 
 - 大学生の時、開発サークルで全国単位のHackerthonに参加した際、開発したもの。
@@ -44,8 +44,8 @@ Description
 - #### C9, Git, Bitbucket, Heroku
 
     ###### このWebアプリを活かして起業するつもりでしたが、宿泊関連法の問題のため、挫折するしかありませんでした。
-    
-    [Project Repoはこちら](https://github.com/Yoodahun/Relaytel)
+
+##### [Project Repoはこちら](https://github.com/Yoodahun/Relaytel)
 
 # 3. Personal BLOG
 
@@ -56,7 +56,7 @@ Description
 
 <https://exhibition-yoo.herokuapp.com>
 
-[Project Repoはこちら](https://github.com/Yoodahun/Exhibition)
+##### [Project Repoはこちら](https://github.com/Yoodahun/Exhibition)
 
 
 
@@ -68,5 +68,5 @@ Description
 - 大学の Object Oriented Design 授業でWaterfall工程で開発。
 - JAVAのSwing Componentsを利用
 
-[Project Repoはこちら](https://github.com/Yoodahun/POS_System)
+##### [Project Repoはこちら](https://github.com/Yoodahun/POS_System)
 

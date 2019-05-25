@@ -18,24 +18,31 @@ Studying
   Udemy class  
   <https://www.udemy.com/ios11-app-development-bootcamp/>
 
-### 2. Linux
+### [Here is my Repository](https://github.com/Yoodahun/iOS-Projects)
 
-- ##### Bash Shell Script
+### [Todoey](https://github.com/Yoodahun/Todoey)
 
-  Udemy class  
-  <https://www.udemy.com/bash-shell-scripting-crash-course-for-beginners/>
+### 2. Bash Shell Script
 
-  *Linuxの勉強の後、AWS Certified Solution Architectを勉強する予定です。*
+​		Udemy class  
+​			<https://www.udemy.com/bash-shell-scripting-crash-course-for-beginners/>
+
+​			*Linuxの勉強の後、AWS Certified Solution Architectを勉強する予定です。*
+
+### [Here is my Repository](https://github.com/Yoodahun/Script)
+
+
 
 ***
 Class
 --
 > ###### レポートは全て韓国語で書かれています。ご了承ください。
+>
 > ###### All reports are written in Korean.
 
 大学授業の授業内容や課題レーポト、ソースコード。
 
-[Repoはこちらです。](https://github.com/Yoodahun/Studied-in-University)
+### [Here is my Repository](https://github.com/Yoodahun/Studied-in-University)
 
 ### 1.Algorithms
 
@@ -43,6 +50,7 @@ Class
 - ##### C++
 
 ### 2. Data Structure
+
 - Data Structure 授業の課題物
 - ##### Java
 

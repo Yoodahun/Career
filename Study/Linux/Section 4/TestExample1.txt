@@ -1,5 +1,0 @@
-total 16
--rw-r--r--  1 Yoo  staff    0  1  8 22:54 1.txt
--rw-r--r--  1 Yoo  staff    0  1  8 22:54 2.txt
--rwxr-xr-x@ 1 Yoo  staff  282  1  8 22:41 myscript.sh
--rw-r--r--  1 Yoo  staff  120  1  8 22:53 test1.sh
